@@ -14,6 +14,12 @@ public class Hippo extends Actor
      */
     public void act()
     {
-        move(5);
+        if(Greenfoot.isKeyDown("right")){
+            move(3);
+        }if(Greenfoot.isKeyDown("left")){
+            move(-3);
+        }if(Greenfoot.isKeyDown("up")){
+            
+        }
     }
 }
