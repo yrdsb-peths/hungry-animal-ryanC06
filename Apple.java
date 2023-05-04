@@ -21,5 +21,6 @@ public class Apple extends Actor
             setLocation(getX(),getY()+1);   // note to self changeing the +1 to someother # will change the falling speed.
         }
         actCount++;
+        
     }
 }

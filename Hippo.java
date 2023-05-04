@@ -12,6 +12,7 @@ public class Hippo extends Actor
      * Act - do whatever the Hippo wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private int counter = 0;
     public void act()
     {
         if(Greenfoot.isKeyDown("right")){
@@ -23,5 +24,15 @@ public class Hippo extends Actor
         }if (Greenfoot.isKeyDown("down")){
             setLocation(getX(), getY() + 3);
         }
+        
+        if (isTouching(Apple.class))
+        {
+            removeTouching(Apple.class);
+            //if (++countCollected == 3) getWorld().removeObject(this);
+        }
+        
+
     }
 }
+
+
