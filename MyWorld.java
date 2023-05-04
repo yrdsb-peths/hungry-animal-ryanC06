@@ -19,5 +19,8 @@ public class MyWorld extends World
         super(600, 400, 1);
         Hippo hippo = new Hippo();
         addObject(hippo, 50, 350);
+        
+        Apple apple = new Apple();
+        addObject(apple, 100, 100);
     }
 }
