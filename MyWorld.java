@@ -8,23 +8,42 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World {
     
-    private int count = 0; 
-    //System.Logger.Level countLabel;
-    int level = 1;
-    int eleSpeed = 2;
-    
+    private int score = 0; 
+    Label scoreLable; 
     public MyWorld() {
         super(600, 400, 1);
-        //make hippo
+        //make hippo and add hippo
         Hippo hippo = new Hippo();
-        //add count lable 
-        //countLabel Level = new Level (0,80);
-        // add hippo
-        addObject(hippo, 50, 350);
-        //make and add apple 
-        Apple apple = new Apple();
-        addObject(apple, 100, 100);
+        addObject(hippo, 300, 300);
+        
+        // creat a label 
+        scoreLable = new Label(0, 80);
+        addObject(scoreLable, 50 , 50);
+        
+        
+        creatApple();
     }
+    
+    /**
+     * Inscrease score 
+     */
+    public void increaseScore(){
+        
+        score++;
+        scoreLable.setValue(score);
+        
+    }
+    /**
+     * Creat a new apple at rendom location at top of screen
+     */
+    public void creatApple(){
+        Apple apple = new Apple();
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(apple,x,y);
+    }
+    
+    
     
 }
 
