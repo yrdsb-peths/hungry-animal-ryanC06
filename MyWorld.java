@@ -25,6 +25,15 @@ public class MyWorld extends World {
     }
     
     /**
+     * End the game and Draw "GameOver"
+     */
+    public void gameOver(){
+        Label gameOverLabel = new Label("Game Over", 100);
+        addObject(gameOverLabel, 300, 200);
+    }
+    
+    
+    /**
      * Inscrease score 
      */
     public void increaseScore(){
