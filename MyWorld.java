@@ -16,6 +16,8 @@ public class MyWorld extends World {
         Hippo hippo = new Hippo();
         addObject(hippo, 300, 300);
         
+        GreenfootImage bg = new GreenfootImage("images/background2.jpg");
+        setBackground(bg);
         // creat a label 
         scoreLable = new Label(0, 80);
         addObject(scoreLable, 50 , 50);
