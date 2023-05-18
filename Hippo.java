@@ -8,10 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Hippo extends Actor
 {
-    /**
-     * Act - do whatever the Hippo wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    GreenfootSound hippoSound = new GreenfootSound ("sound.mp3");
+    //GreenfootImage idle = new GreenfootImage("hippoSprite.png");
     private int counter = 0;
     public void act(){
         if(Greenfoot.isKeyDown("right")){
@@ -33,6 +31,7 @@ public class Hippo extends Actor
         MyWorld world = (MyWorld) getWorld();
         world.creatApple();
         world.increaseScore();
+        hippoSound.play();
         }
     }
 }
