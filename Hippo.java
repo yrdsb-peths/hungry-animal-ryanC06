@@ -9,13 +9,34 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Hippo extends Actor
 {
     GreenfootSound hippoSound = new GreenfootSound ("sound.mp3");
-    //GreenfootImage idle = new GreenfootImage("hippoSprite.png");
+    GreenfootImage idleRight = new GreenfootImage("hippo_sprite.png");
+    GreenfootImage idleLeft = new GreenfootImage("hippo_sprite.png");
     private int counter = 0;
+    
+    //direction the hippo is facing 
+    String facing = "right";
+    
+    public Hippo(){
+        idleRight.scale(100,100);
+        setImage(idleRight);
+        
+        idleLeft.scale(100,100);
+        setImage(idleLeft);
+        idleLeft.mirrorHorizontally();
+    }
     public void act(){
         if(Greenfoot.isKeyDown("right")){
             move(3);
+            facing = "right";
         }if(Greenfoot.isKeyDown("left")){
             move(-3);
+            facing = "left";
+        }if(Greenfoot.isKeyDown("D")){
+            move(3);
+            facing = "right";
+        }if(Greenfoot.isKeyDown("A")){
+            move(-3);
+            facing = "left";
         }
         //Remove apple if elephate eats it 
         eat();

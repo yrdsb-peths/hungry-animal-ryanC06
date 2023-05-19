@@ -11,7 +11,7 @@ public class MyWorld extends World {
     private int score = 0; 
     Label scoreLable; 
     public MyWorld() {
-        super(600, 400, 1);
+        super(600, 400, 1, false);
         //make hippo and add hippo
         Hippo hippo = new Hippo();
         addObject(hippo, 300, 300);
@@ -33,8 +33,6 @@ public class MyWorld extends World {
         Label gameOverLabel = new Label("Game Over", 100);
         addObject(gameOverLabel, 300, 200);
     }
-    
-    
     /**
      * Inscrease score 
      */
