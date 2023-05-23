@@ -14,7 +14,7 @@ public class Hippo extends Actor
     private int counter = 0;
     
     //direction the hippo is facing 
-    String facing = "right";
+    String facing = "left";
     
     public Hippo(){
         idleRight.scale(100,100);
@@ -37,6 +37,13 @@ public class Hippo extends Actor
         }if(Greenfoot.isKeyDown("A")){
             move(-3);
             facing = "left";
+        }
+        
+        if(facing.equals("left")){
+            setImage(idleLeft);
+        }
+        else if(facing.equals("right")){
+            setImage(idleRight);
         }
         //Remove apple if elephate eats it 
         eat();
