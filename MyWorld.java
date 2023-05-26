@@ -10,6 +10,7 @@ public class MyWorld extends World {
     
     private int score = 0; 
     Label scoreLable; 
+    int level = 1;
     public MyWorld() {
         super(600, 400, 1, false);
         //make hippo and add hippo
@@ -41,12 +42,16 @@ public class MyWorld extends World {
         score++;
         scoreLable.setValue(score);
         
+        if(score % 5 == 0){
+            level += 1;
+        }
     }
     /**
      * Creat a new apple at rendom location at top of screen
      */
     public void creatApple(){
         Apple apple = new Apple();
+        apple.setSpeed (level);
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject(apple,x,y);
