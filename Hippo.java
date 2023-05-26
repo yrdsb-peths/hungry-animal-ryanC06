@@ -61,7 +61,17 @@ public class Hippo extends Actor
         world.increaseScore();
         hippoSound.play();
         }
+        
+        if (isTouching(Strawberry.class)){
+        removeTouching(Strawberry.class);
+        MyWorld world = (MyWorld) getWorld();
+        //world.creatStrawberry();
+        hippoSound.play();
+        world.gameOver();
+        }
     }
 }
+
+
 
 

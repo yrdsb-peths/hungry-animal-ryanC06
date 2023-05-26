@@ -25,6 +25,7 @@ public class MyWorld extends World {
         
         
         creatApple();
+        
     }
     
     /**
@@ -33,6 +34,7 @@ public class MyWorld extends World {
     public void gameOver(){
         Label gameOverLabel = new Label("Game Over", 100);
         addObject(gameOverLabel, 300, 200);
+        Greenfoot.stop();
     }
     /**
      * Inscrease score 
@@ -45,6 +47,9 @@ public class MyWorld extends World {
         if(score % 5 == 0){
             level += 1;
         }
+        if(score % 2 ==0){
+            creatStrawberry();
+        }
     }
     /**
      * Creat a new apple at rendom location at top of screen
@@ -52,12 +57,18 @@ public class MyWorld extends World {
     public void creatApple(){
         Apple apple = new Apple();
         apple.setSpeed (level);
-        int x = Greenfoot.getRandomNumber(600);
+        int x = Greenfoot.getRandomNumber(500);
         int y = 0;
         addObject(apple,x,y);
     }
     
-    
+    public void creatStrawberry(){
+        Strawberry strawberry = new Strawberry();
+        //strawberry.setSpeed (level);
+        int x = Greenfoot.getRandomNumber(500);
+        int y = 0;
+        addObject(strawberry,x,y);
+    }
     
 }
 
