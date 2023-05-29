@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World {
     
-    private int score = 0; 
+    private int Score = 0; 
     Label scoreLable; 
     int level = 1;
     public MyWorld() {
@@ -19,6 +19,7 @@ public class MyWorld extends World {
         
         GreenfootImage bg = new GreenfootImage("images/background2.jpg");
         setBackground(bg);
+        
         // creat a label 
         scoreLable = new Label(0, 80);
         addObject(scoreLable, 50 , 50);
@@ -41,13 +42,13 @@ public class MyWorld extends World {
      */
     public void increaseScore(){
         
-        score++;
-        scoreLable.setValue(score);
+        Score++;
+        scoreLable.setValue(Score);
         
-        if(score % 5 == 0){
+        if(Score % 5 == 0){
             level += 1;
         }
-        if(score % 2 ==0){
+        if(Score % 2 ==0){
             creatStrawberry();
         }
     }
@@ -64,12 +65,12 @@ public class MyWorld extends World {
     
     public void creatStrawberry(){
         Strawberry strawberry = new Strawberry();
-        //strawberry.setSpeed (level);
+        strawberry.setSpeed (level+=1);
         int x = Greenfoot.getRandomNumber(500);
         int y = 0;
         addObject(strawberry,x,y);
     }
-    
+
 }
 
 

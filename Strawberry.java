@@ -18,7 +18,7 @@ public class Strawberry extends Actor
     public void act()
     {
         if(actCount>fallTime){
-            setLocation(getX(),getY()+3); 
+            setLocation(getX(),getY()+speed); 
         }
         
         actCount++;

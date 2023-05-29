@@ -1,14 +1,1 @@
-# Hungry Animal Tutorial
-This is the README.md file.
-Change this file to show your intended audience what you want them to see.
-
-You can use **Markdown** syntax to format this file to do things like **bold** or *italicize* text.
-[Markdown basics](https://www.markdownguide.org/getting-started/)
-
-This particular repository is the starting template for the Hungry Elephant tutorial.
-
-[Part 1: Greenfoot Basics](https://youtu.be/zxaa3X0MihI)
-
-[Part 2: Game Enhancements](https://youtu.be/TwID9i0Ey6o)
-
-[Part 3: Final Touches](https://youtu.be/GT-eFwa4Abc)
+In this Hungry Animal game there will apples and strawberries falling from the sky. The hungry Hippo is trying to eat the apples and not the strawberries. If the Hippo eats one of the strawberries the Hippo will DIE or GAMEOVER!! As u get more points the different foods are going to faill at faster rates.

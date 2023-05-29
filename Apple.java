@@ -15,7 +15,7 @@ public class Apple extends Actor
     public void act(){
         if(actCount>fallTime)
         {
-            setLocation(getX(),getY()+2);   // note to self changeing the +1 to someother # will change the falling speed.
+            setLocation(getX(),getY()+speed);   // note to self changeing the +1 to someother # will change the falling speed.
         }
         actCount++;
         
