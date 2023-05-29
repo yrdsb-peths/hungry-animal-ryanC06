@@ -10,6 +10,8 @@ public class MyWorld extends World {
     
     private int Score = 0; 
     Label scoreLable; 
+    //Label highScoreLable;
+    
     int level = 1;
     public MyWorld() {
         super(600, 400, 1, false);
@@ -23,7 +25,11 @@ public class MyWorld extends World {
         // creat a label 
         scoreLable = new Label(0, 80);
         addObject(scoreLable, 50 , 50);
-        
+        // creat a high score 
+        //Label labelC = new Label ("High score:",40);
+        //highScoreLable = new Label(0,70);
+        //addObject( highScoreLable, 535 , 50);
+        //addObject(labelC, 435, 50);
         
         creatApple();
         
@@ -50,7 +56,7 @@ public class MyWorld extends World {
         }
         if(Score % 2 ==0){
             creatStrawberry();
-        }
+        }        
     }
     /**
      * Creat a new apple at rendom location at top of screen
